@@ -38,11 +38,12 @@ input#menu-hamburguesa~ul{
     list-style:none;
     height: 80%;
     position: absolute;
+    top: -100%;
     left: 100%;
     width: 100%;
     background-color: #02583a;
     transition: all 300ms linear;
-    z-index: 100;
+    z-index: 50;
 }
 
 input#menu-hamburguesa~ul>li{
@@ -59,13 +60,15 @@ span{
 .menu-image #menu-hamburguesa{
     visibility: hidden;
 }
-
 .menu-image img{
     width: 35px;
     color: white;
+    position: relative;
+    z-index: 70;
 }
 
 .menu-image #menu-hamburguesa:checked~ul{
+    top: 0;
     left: 0;
 }
 
