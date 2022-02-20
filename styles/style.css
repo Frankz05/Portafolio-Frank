@@ -16,6 +16,12 @@ Espero que le vaya bien maestra */
     box-sizing: border-box;
     font-family: var(--font-family);
 }
+html{
+    scroll-behavior: smooth;
+}
+h2[id]{
+    scroll-margin-top: 4rem;
+}
 body{
     width: 100vw;
 }
@@ -30,10 +36,10 @@ body{
 }
 input#menu-hamburguesa~ul{
     margin-top: .4rem;
-    padding: 2rem 0;
+    padding: 4rem 0;
     display:flex;
     flex-direction: column;
-    justify-content:flex-start;
+    justify-content: space-between;
     align-items: center;
     list-style:none;
     height: 80%;
@@ -45,11 +51,16 @@ input#menu-hamburguesa~ul{
     transition: all 300ms linear;
     z-index: 50;
 }
-
 input#menu-hamburguesa~ul>li{
+    font-size: 1.5rem;
+    padding: .6rem 0;
+}
+
+input#menu-hamburguesa~ul>li>a{
     font-size: 1.5rem;
     color: var(--color-cuadros);
     padding: .6rem 0;
+    text-decoration: none;
 
 }
 
@@ -153,13 +164,13 @@ span{
 #colaboracion{
     background-color: var(--color-cuadros);
     text-align: center;
-    width: 90vw;
+    width: 80vw;
     padding: 1rem .1rem;
     margin: auto;
 }
 
 #colaboracion>p{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -197,19 +208,19 @@ span{
     outline: transparent;
 }
 
-#acerca-de-mi{
+.acerca-de-mi{
     display: flex;
     flex-direction: column;
     text-align: start;
     margin: 3rem 1rem;
 }
-#acerca-de-mi>p{
+.acerca-de-mi>p{
     border-left: 4px solid var(--color-nav);
     padding-left: .7rem;
     margin-top: 1.5rem;
 }
 
-#acerca-de-mi>button{
+.acerca-de-mi>button{
     display: flex;
     width: 50vw;
     justify-content: space-evenly;
@@ -221,7 +232,7 @@ span{
     font-size: 1rem;
     border-radius: 60px;
 }
-#acerca-de-mi>button img{
+.acerca-de-mi>button img{
     color: #fff;
     width: px; 
 }
@@ -383,13 +394,13 @@ span{
 #portafolio>.contain-img>.contain-2img img{
     width: 44vw;
 }
-#contact{
+.contact{
     margin: 4rem 2.5rem;
 }
-#contact h2{
+.contact h2{
     text-align: center;
 }
-#contact .contain-contact{
+.contact .contain-contact{
     display: flex;
     justify-content: space-between;
 }
@@ -437,14 +448,15 @@ footer .agradecimiento{
         height: 90%;
     }
     
+    input#menu-hamburguesa~ul>li>a{
+        font-size: 1.8rem;
+    }
     input#menu-hamburguesa~ul>li{
         font-size: 1.8rem;
     }
-
     #about-section{
         height: 150vw;
     }
-
     .image-perfil img{
         width: 47vw;
         border-radius: 100px;
@@ -479,7 +491,7 @@ footer .agradecimiento{
         left: 5.5rem;
     }
     #colaboracion>p{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     #colaboracion div{
         margin: 0 3rem;
@@ -488,14 +500,14 @@ footer .agradecimiento{
         height: 50px;
     }
 
-    #acerca-de-mi{
+    .acerca-de-mi{
         margin: 3rem 2rem;
     }    
-    #acerca-de-mi>button{
+    .acerca-de-mi>button{
         margin-left: 19vw;
         font-size: 1.2rem;
     }
-    #acerca-de-mi>button img{
+    .acerca-de-mi>button img{
         width: 33px; 
     }
 
@@ -538,7 +550,7 @@ footer .agradecimiento{
     #portafolio .contain-2img{
         justify-content: space-between;
     }
-    #contact .contain-contact{
+    .contact .contain-contact{
         margin-top: 2rem;
         justify-content: space-around;
     }
@@ -599,13 +611,13 @@ footer .agradecimiento{
         left: 7rem;
     }
     #colaboracion>p{
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
-    #acerca-de-mi>button{
+    .acerca-de-mi>button{
         margin-left: 19vw;
         font-size: 1.2rem;
     }
-    #acerca-de-mi>button img{
+    .acerca-de-mi>button img{
         width: 33px;
         margin-right: -3rem;
     }
@@ -664,7 +676,7 @@ footer .agradecimiento{
         padding: 1rem 5rem 2rem 5rem;
         font-size: 1.2rem;
     }
-    #contact .contain-contact{
+    .contact .contain-contact{
         margin-top: 3rem;
         justify-content: space-around;
     }
@@ -699,21 +711,28 @@ footer .agradecimiento{
         background-color: transparent;
     }
 
-    input#menu-hamburguesa~ul>li{
+    input#menu-hamburguesa~ul>li>a{
         margin: 0 1rem;
         font-size: 1.1rem;
         padding-bottom: 0;
     }
-
+    input#menu-hamburguesa~ul>li{
+        font-size: 1.2rem;
+        margin-right: .5rem;
+    }
     span{
         color: var(--gold-color);
     }
 
-    input#menu-hamburguesa~ul>li:hover{
+    input#menu-hamburguesa~ul>li>a:hover{
         cursor: pointer;
         color: var(--gold-color);
-        border-bottom: 1px solid #F9F5F2;
-
+        border-bottom: 1px solid var(--gold-color);
+    }
+    input#menu-hamburguesa~ul>li>:hover{
+        cursor: pointer;
+        color: var(--gold-color);
+        border-bottom: 1px solid var(--gold-color);
     }
     input#menu-hamburguesa~ul>li:active{
         color: var(--gold-color);
@@ -793,22 +812,22 @@ footer .agradecimiento{
         padding: .5rem 1.5rem;
     }
     
-    #acerca-de-mi{
+    .acerca-de-mi{
         display: flex;
         flex-direction: column;
         text-align: start;
         margin: 3rem 7rem;
     }
-    #acerca-de-mi h2{
+    .acerca-de-mi h2{
         font-size: 2rem;
     }
-    #acerca-de-mi>p{
+    .acerca-de-mi>p{
         padding-left: 2rem;
         margin-top: 1.5rem;
         font-size: .9rem;
     }
     
-    #acerca-de-mi>button{
+    .acerca-de-mi>button{
         width: 23vw;
         justify-content: space-around;
         margin: 2.5rem 0;
@@ -817,11 +836,11 @@ footer .agradecimiento{
         padding-top: .7rem;
         font-size: .9rem;
     }
-    #acerca-de-mi>button:hover{
+    .acerca-de-mi>button:hover{
         cursor: pointer;
         border: 5px solid var(--color-nav);
     }
-    #acerca-de-mi>button img{
+    .acerca-de-mi>button img{
         width: 26px; 
     }
     #estudios h2{
@@ -949,11 +968,11 @@ footer .agradecimiento{
     #contact{
         margin: 4rem 2.5rem;
     }
-    #contact h2{
+    .contact h2{
         font-size: 2rem;
         text-align: center;
     }
-    #contact .contain-contact{
+    .contact .contain-contact{
         display: flex;
         justify-content: space-evenly;
     }
@@ -1026,17 +1045,17 @@ footer .agradecimiento{
     #colaboracion>div>button p{
         font-size: 1rem;
     }
-    #acerca-de-mi{
+    .acerca-de-mi{
         display: flex;
         flex-direction: column;
         text-align: start;
         margin: 4rem 13rem;
     }
-    #acerca-de-mi>p{
+    .acerca-de-mi>p{
         font-size: 1rem;
     }
     
-    #acerca-de-mi>button{
+    .acerca-de-mi>button{
         margin-left: 22vw;
         padding: .9rem 1.3rem;
         padding-top: 1rem;
@@ -1122,7 +1141,7 @@ footer .agradecimiento{
         width: 23vw;
         height: 50vh;
     }
-    #contact h2{
+    .contact h2{
         font-size: 2.3rem;
     }
     .contain-contact>.mail img{
