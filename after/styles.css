@@ -1,0 +1,50 @@
+/* los valores de largo y ancho pueden cambiar */
+#habilidades {
+    width: 500px;
+}
+
+/* 
+Le damos estilos tanto a la barra principal (.barra) y 
+y a los porcentajes (.barra::after)
+*/
+
+.barra,
+.barra::after {
+    width: 200px;
+    height: 15px;
+    display: inline-block; /* esta vaina es clave XD y recien me doy cuenta :v */
+    border-radius: 15px;
+}
+
+/*
+Para diferenciarlo mejor, a la barra (fondo) le damos un color
+*/
+.barra{
+    background-color: rgb(177, 177, 177);
+}
+
+/* 
+y a los porcentajes, otro color 
+*/
+.barra::after {
+    content: ''; /* el contenido es solo para que la barra se muestra */
+    background-color: blue;
+}
+
+/* y ya vas dando los porcentajes que quieras :D */
+.habilidad1>.barra::after {
+    width: 50%;
+}
+
+/* No te olvides de su porcentaje en la barra */
+.habilidad1>span{
+    position: relative;
+    bottom: 20px;
+    right: 120px;
+}
+
+.habilidad2>.barra::after{
+    width: 60%;
+}
+
+

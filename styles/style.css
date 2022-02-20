@@ -12,19 +12,20 @@
     box-sizing: border-box;
     font-family: var(--font-family);
 }
-
+body{
+    width: 100vw;
+}
+/* NAV */
 #nav-container{
     display:flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: .5rem 2rem;
     background-color: var(--color-nav);
     font-family:  'Poppins', sans-serif;
-    border: 1px solid black
 }
-
 input#menu-hamburguesa~ul{
-    margin-top: 1rem;
+    margin-top: .4rem;
     padding: 2rem 0;
     display:flex;
     flex-direction: column;
@@ -37,10 +38,11 @@ input#menu-hamburguesa~ul{
     width: 100%;
     background-color: #02583a;
     transition: all 300ms linear;
+    z-index: 100;
 }
 
 input#menu-hamburguesa~ul>li{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--color-cuadros);
     padding: .6rem 0;
 
@@ -65,7 +67,6 @@ span{
 
 #about-section{
     padding: 5rem 1rem;
-    /* height: 900px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,10 +76,9 @@ span{
 }
 
 .image-perfil img{
-    width: 47vw;
-    /* height: 23.75vh; */
-    border-radius: 80px;
-    margin-top: 3rem;
+    width: 49vw;
+    border-radius: 70px;
+    margin-top: 3.5rem;
 }
 #about-section>div h1{
      color: var(--color-body);
@@ -107,12 +107,12 @@ span{
 .designer{
     position: absolute;
     left: 1.5rem;
-    bottom: 14rem;
+    bottom: 11rem;
 }
 .frontend{
     position: absolute;
     top: 22rem;
-    right: -.4rem;
+    right: -.6rem;
 }
 #about-section>.social-icon{
     display: flex;
@@ -255,52 +255,432 @@ span{
     font-size: 1rem;
     padding-top: 1rem;
 }
+
+#skills{
+    margin: 2.5rem 1.5rem;
+}
+#skills h2{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#skills{
+    width: 90vw;
+}
+#skills p{
+    font-weight: 600;
+}
+.barra,.barra::after{
+    width: 85vw;
+    height: 15px;
+    display: inline-block;
+    border-radius: 15px;
+    margin-bottom: .8rem;
+}
+.barra{
+    background-color: rgb(177, 177, 177);
+}
+.barra::after{
+    content: " ";
+    background-color: var(--color-nav);
+}
+.skill1>.barra::after{
+    width: 80%;
+}
+.skill1>p span{
+    position: relative;
+    left: 45vw;
+    color: var(--color-nav);
+}
+.skill2>.barra::after{
+    width: 95%;
+}
+.skill2>p span{
+    position: relative;
+    left: 40vw;
+    color: var(--color-nav);
+}
+.skill3>.barra::after{
+    width: 80%;
+}
+.skill3>p span{
+    position: relative;
+    left: 60vw;
+    color: var(--color-nav);
+}
+.skill4>.barra::after{
+    width: 70%;
+}
+.skill4>p span{
+    position: relative;
+    left: 33vw;
+    color: var(--color-nav);
+}
+
+#experiencia h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Intente hacer el carrusel sin JS pero no me salió */
+.carrusel{
+    margin: 1rem;
+}
+.carrusel ul{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.carrusel li{
+    list-style: none;
+    margin: .5rem;
+    background-color: var(--color-cuadros);
+    padding: 1rem;
+}
+.carrusel img{
+    padding-left: 2rem;
+}
+.carrusel .title{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.carrusel .year{
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+#portafolio{
+    margin: 4rem 1rem 2rem 1rem;
+}
+#portafolio h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#portafolio .contain-text{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem 2.5rem;
+}
+#portafolio .contain-img{
+    display: flex;
+    flex-direction: column;
+}
+#portafolio .contain-2img{
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+#portafolio>.contain-img>.contain-2img img{
+    width: 44vw;
+}
+#contact{
+    margin: 4rem 2.5rem;
+}
+#contact h2{
+    text-align: center;
+}
+#contact .contain-contact{
+    display: flex;
+    justify-content: space-between;
+}
+.contain-contact img{
+    padding: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--color-cuadros);
+    margin: 0 0 0 1.5rem;
+}
+.contain-contact>.mail img{
+    margin-left: 3rem;
+}
+.contain-contact .text-number,.text-mail{
+    font-weight: 600;
+    text-align: center;
+}
+.contain-contact .number,.text{
+    font-size: .9rem;
+    opacity: .5;
+    text-align: center;
+}
+
+footer{
+    background-color: var(--color-nav);
+    color: #fff;
+    text-align: center;
+}
+footer .name{
+    font-size: 2rem;
+    padding: 1.5rem 0 1rem 0;
+    font-weight: 600;
+}
+footer .agradecimiento{
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
+.box-star img{
+    width: 1.8rem;
+    margin: 0 .5rem 2rem .5rem; 
+}
+
+
 @media screen and ( min-width: 600px){
+    input#menu-hamburguesa~ul{
+        height: 90%;
+    }
+    
+    input#menu-hamburguesa~ul>li{
+        font-size: 1.8rem;
+    }
+
     #about-section{
-        padding: .5rem 2rem;
+        height: 150vw;
     }
 
     .image-perfil img{
-        border-radius: 120px;
-        margin-top: 4.5rem;
+        width: 47vw;
+        border-radius: 100px;
+        margin-top: 9rem;
     }
-
-    #about-section>div>h1{
-        font-size: 3.2rem;
-        margin-top:4.5rem;
+    #about-section>div h1{
+         font-size: 2.5rem;
+         margin-top: -1rem;
     }
-
     #about-section>div p{
-        font-size: 1.8rem;
-        padding: .5rem 0;
+        font-size: 1.5rem;
+        margin: 1rem 2rem;
+    }
+    #about-section>.texto-flotante p{
+        font-size: .8rem;
+        padding: .5rem 2rem;
+    }
+    .designer{
+        bottom: 6.5rem;
+    }
+    .frontend{
+        top: 30rem;
+        right: -.5rem;
+    }
+    #about-section>.social-icon img{
+        width: 50px;
+    }
+    .linkedin{
+        right: 5.5rem;
+    }
+    .twitter{
+        left: 5.5rem;
+    }
+    #colaboracion>p{
+        font-size: 1.4rem;
+    }
+    #colaboracion div{
+        margin: 0 3rem;
+    }
+    #colaboracion>div input{
+        height: 50px;
+    }
 
+    #acerca-de-mi{
+        margin: 3rem 2rem;
+    }    
+    #acerca-de-mi>button{
+        margin-left: 19vw;
+        font-size: 1.2rem;
+    }
+    #acerca-de-mi>button img{
+        width: 33px; 
+    }
+
+    #estudios h2{
+        font-size: 1.6rem;
+    }
+    .escuelas{
+        justify-content: space-around;
+    }
+    .barra,.barra::after{
+        height: 18px;
+    }
+    .skill1>p span{
+        left: 52vw;
+    }
+    .skill2>p span{
+        left: 53vw;
+    }
+    .skill3>p span{
+        left: 62vw;
+    }
+    .skill4>p span{
+        left: 40vw;
+    }
+    
+    #experiencia h2{
+        margin-bottom: 1.5rem;
+    }   
+    .carrusel img{
+        padding-left: 5rem;
+    }
+
+    #portafolio h2{
+        margin-bottom: 2rem;
+    }
+    #portafolio .contain-text{
+        justify-content: space-between;
+        padding: 1rem 3rem 2rem 3.5rem;
+    }
+    #portafolio .contain-2img{
+        justify-content: space-between;
+    }
+    #contact .contain-contact{
+        margin-top: 2rem;
+        justify-content: space-around;
+    }
+    .contain-contact img{
+        width: 8rem;
+        padding: 2rem;
+    }
+    .contain-contact>.mail img{
+        margin-left: 1rem;
+    }
+    footer .name{
+        font-size: 2.8rem;
+        padding: 2rem 0 1rem 0;
+        font-weight: 600;
+    }
+    footer .agradecimiento{
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .box-star img{
+        width: 2.5rem;
+        margin: 0 .5rem 2rem .5rem; 
+    }
+
+}
+
+@media screen and ( min-width: 768px){
+    .image-perfil img{
+        width: 48vw;
+        border-radius: 130px;
+        margin-top: 11.5rem;
+    }
+    #about-section>div h1{
+         font-size: 3.4rem;
+         margin-top: 0;
+    }
+    #about-section>div p{
+        font-size: 2rem;
     }
     #about-section>.texto-flotante p{
         font-size: 1rem;
-        padding: .5rem 1.3rem;
+        padding: .7rem 2.5rem;
     }
-    
     .designer{
-        left: 2rem;
-        bottom: 6rem;
+        bottom: -5rem;
     }
     .frontend{
-        top: 32rem;
+        top: 38rem;
         right: -.3rem;
     }
-
     #about-section>.social-icon img{
-        background-color: var(--color-body);
-        width: 50px;
-        margin: 0 1.5rem;
+        width: 60px;
+    }
+    .linkedin{
+        right: 7rem;
+    }
+    .twitter{
+        left: 7rem;
+    }
+    #colaboracion>p{
+        font-size: 1.7rem;
+    }
+    #acerca-de-mi>button{
+        margin-left: 19vw;
+        font-size: 1.2rem;
+    }
+    #acerca-de-mi>button img{
+        width: 33px;
+        margin-right: -3rem;
+    }
+
+    #estudios h2{
+        font-size: 1.8rem;
+    }
+    .escuelas{
+        justify-content: space-evenly;
+    }
+
+
+
+    #skills{
+        margin: 2.5rem 0 2.5rem 3.5rem;
+    }
+    #skills h2{
+        margin-bottom: 3rem;
+    }
+    
+    #skills{
+        width: 85vw;
+    }
+    #skills p{
+        font-weight: 600;
+    }
+    .barra,.barra::after{
+        width: 85vw;
+        height: 20px;
+    }
+    .skill1>p span{
+        left: 54vw;
+    }
+    .skill2>p span{
+        left: 57vw;
+    }
+    .skill3>p span{
+        left: 63vw;
+    }
+    .skill4>p span{
+        left: 45vw;
+    }
+    
+    #experiencia h2{
+        margin-bottom: 2rem;
+    }   
+    .carrusel img{
+        padding-left: 8rem;
+    }
+
+    #portafolio h2{
+        margin-bottom: 2rem;
+    }
+    #portafolio .contain-text{
+        justify-content: space-between;
+        padding: 1rem 5rem 2rem 5rem;
+        font-size: 1.2rem;
+    }
+    #contact .contain-contact{
+        margin-top: 3rem;
+        justify-content: space-around;
+    }
+    footer .name{
+        font-size: 2.9rem;
+        padding: 2rem 0 1rem 0;
+        font-weight: 600;
+    }
+    footer .agradecimiento{
+        font-size: 1.6rem;
+        padding-bottom: 1.5rem;
+    }
+    .box-star img{
+        width: 2.7rem;
+        margin: 0 .5rem 2rem .5rem; 
     }
 }
+
 
 @media screen and ( min-width: 992px ){
     label{
         display: none;
     }
-
     input#menu-hamburguesa~ul{
         margin: -2rem 0 -.5rem 0;
         padding: .5rem 0;
@@ -314,7 +694,7 @@ span{
 
     input#menu-hamburguesa~ul>li{
         margin: 0 1rem;
-        font-size: .9rem;
+        font-size: 1.1rem;
         padding-bottom: 0;
     }
 
@@ -331,4 +711,429 @@ span{
     input#menu-hamburguesa~ul>li:active{
         color: var(--gold-color);
     }
+    #about-section{
+        height: 82vw;
+        background-image: url(/esset/Vectores/Estructura\ home\ desktop.png);
+        background-repeat: no-repeat;
+        background-size: 100vw;
+    }
+    .image-perfil img{
+        width: 28vw;
+        border-radius: 85px;
+        margin-top: 4.3rem;
+    }
+    #about-section>div h1{
+         font-size: 3.5rem;
+         margin-bottom: -.5rem;
+    } 
+    #about-section>div p{
+        font-size: 2rem;
+        padding: 0 8rem;
+    }
+    #about-section>.texto-flotante p{
+        font-size: 1rem;
+        padding: .3rem 1.8rem;
+        line-height: 1.3;
+        margin: 1rem;
+    }
+    .designer{
+        left: 12.8rem;
+        bottom: 4.8rem;
+    }
+    .frontend{
+        top: 30rem;
+        right: 10.5rem;
+    }
+    #about-section>.social-icon img{
+        width: 50px;
+    }
+    .linkedin{
+        bottom: 2.5rem;
+        right: 5.7rem;
+    }
+    .twitter{
+        bottom: 2.5rem;
+        left: 5.7rem;
+    }
+    #colaboracion{
+        text-align: center;
+        width: 63vw;
+        padding: 2rem .1rem;
+    }
+    #colaboracion>p{
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    #colaboracion div{
+        width: 90%;
+    }
+    #colaboracion>div input{
+        width: 70vw;
+        height: 40px;
+    }
+    #colaboracion>div button{
+        padding: 0 4rem;
+    }
+    #colaboracion>div>button p{
+        font-size: .9rem;
+    }
+    #colaboracion>div button:hover{
+        cursor: pointer;
+        border: 5px solid var(--color-nav);
+    }
+    ::placeholder{
+        padding: .5rem 1.5rem;
+    }
+    
+    #acerca-de-mi{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin: 3rem 7rem;
+    }
+    #acerca-de-mi h2{
+        font-size: 2rem;
+    }
+    #acerca-de-mi>p{
+        padding-left: 2rem;
+        margin-top: 1.5rem;
+        font-size: .9rem;
+    }
+    
+    #acerca-de-mi>button{
+        width: 23vw;
+        justify-content: space-around;
+        margin: 2.5rem 0;
+        margin-left: 27vw;
+        padding: .2rem 1.3rem;
+        padding-top: .7rem;
+        font-size: .9rem;
+    }
+    #acerca-de-mi>button:hover{
+        cursor: pointer;
+        border: 5px solid var(--color-nav);
+    }
+    #acerca-de-mi>button img{
+        width: 26px; 
+    }
+    #estudios h2{
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .escuelas{
+        display: flex;
+        justify-content: center;
+        gap: rem;
+    }
+    #estudios>.escuelas .escuela1{
+        padding: 5rem;
+        padding-top: 2rem;
+        margin: .5rem;
+    }
+    #estudios>.escuelas .escuela2{
+        padding: 1rem 6rem;
+        margin: .5rem;
+    }
+    #estudios>.escuelas>.escuela1 img{
+        width: 140px;
+        height: 60px;
+        margin-bottom: 1.7rem;
+    }
+    #estudios>.escuelas>.escuela2 img{
+        width: 85px;
+    }
+    #skills{
+        margin: 2.5rem 1.5rem 3rem 1.5rem;
+
+    }
+    #skills h2{
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        margin-left: 6rem;
+        margin-top: 3rem;
+    }
+    
+    #skills .skill1,.skill2,.skill3,.skill4{
+        margin: 0 16vw;
+    }
+    .barra,.barra::after{
+        width: 62vw;
+        height: 15px;
+    }
+    .skill1>.barra::after{
+        width: 80%;
+    }
+    .skill1>p span{
+        left: 39vw;
+    }
+    .skill2>.barra::after{
+        width: 95%;
+    }
+    .skill2>p span{
+        left: 42vw;
+    }
+    .skill3>.barra::after{
+        width: 80%;
+    }
+    .skill3>p span{
+        left: 46vw;
+    }
+    .skill4>.barra::after{
+        width: 70%;
+    }
+    .skill4>p span{
+        left: 32vw;
+    }
+    #experiencia{
+        background-color: var(--color-cuadros);
+        margin: 0 4rem;
+    }
+    #experiencia h2{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        padding: 2.5rem 0 0 0;
+    }
+    .carrusel{
+        margin: 1rem;
+    }
+    .carrusel ul{
+        display:flex;
+        padding: 0 1rem 1rem 1rem;
+    }
+    .carrusel img{
+        padding-left: 2rem;
+    }   
+    #portafolio{
+        margin: 4rem 1rem 2rem 1rem;
+    }
+    #portafolio h2{
+        font-size: 2.2rem;
+    }
+    #portafolio .contain-text{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1rem 1rem 1rem 2.5rem;
+    }
+    .contain-img img{
+        width: 28vw;
+        height: 50vh;
+        margin: 0 1rem;
+        margin-bottom: 1rem;
+    }
+    .contain-2img>img{
+        width: 17vw;
+        height: 50vh;
+    }
+    #portafolio .contain-img{
+        margin: 1rem 3rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
+    #portafolio>.contain-img>.contain-2img img{
+        gap: 0;
+        margin: -1.5rem 0;
+        width: 25vw;
+    }
+    #contact{
+        margin: 4rem 2.5rem;
+    }
+    #contact h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+    #contact .contain-contact{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .contain-contact>.mail img{
+        margin-left: 1.5rem;
+    }
+    .contain-contact .text-number,.text-mail{
+        font-weight: 600;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    .contain-contact img:hover{
+        cursor: pointer;
+        border:4px solid var(--gold-color);
+
+    }
+    .box-star img{
+        width: 1.8rem;
+        margin: 0 .5rem 1rem .5rem; 
+    }    
+}
+
+@media screen and ( min-width: 1300px ){
+    .image-perfil img{
+        width: 28vw;
+        border-radius: 120px;
+        margin-top: 8rem;
+    }
+    #about-section>div h1{
+         font-size: 4.2rem;
+         margin-top:1.5rem
+    } 
+    #about-section>div p{
+        font-size: 2.5rem;
+        padding: 0 13rem;
+    }
+    #about-section>.texto-flotante p{
+        font-size: 1.2rem;
+        padding: .5rem 2rem;
+        line-height: 1.3;
+    }
+    .designer{
+        left: 18rem;
+        bottom: 6.5rem;
+    }
+    .frontend{
+        top: 42rem;
+        right: 16rem;
+    }
+    #about-section>.social-icon img{
+        width: 60px;
+    }
+    .linkedin{
+        bottom: 3rem;
+        right: 7.5rem;
+    }
+    .twitter{
+        bottom: 3rem;
+        left: 7.5rem;
+    }
+    #colaboracion{
+        text-align:center;
+        width: 55vw;
+    }
+    #colaboracion>p{
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    #colaboracion>div>button p{
+        font-size: 1rem;
+    }
+    #acerca-de-mi{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin: 4rem 13rem;
+    }
+    #acerca-de-mi>p{
+        font-size: 1rem;
+    }
+    
+    #acerca-de-mi>button{
+        margin-left: 22vw;
+        padding: .9rem 1.3rem;
+        padding-top: 1rem;
+        font-size: 1rem;
+    }
+    #estudios>.escuelas .escuela1{
+        padding: 9rem;
+        padding-top: 5rem;
+        margin: .5rem;
+    }
+    #estudios>.escuelas .escuela2{
+        padding: 3.5rem 10rem;
+        margin: .5rem;
+    }
+    #skills{
+        margin: 2.5rem 1.5rem 3rem 1.5rem;
+    }
+    #skills h2{
+        font-size: 2.2rem;
+    }
+    
+    #skills .skill1,.skill2,.skill3,.skill4{
+        margin: 0 16vw;
+    }
+    .barra,.barra::after{
+        width: 62vw;
+        height: 18px;
+    }
+    .skill1>.barra::after{
+        width: 80%;
+    }
+    .skill1>p span{
+        left: 41vw;
+    }
+    .skill2>.barra::after{
+        width: 95%;
+    }
+    .skill2>p span{
+        left: 46vw;
+    }
+    .skill3>.barra::after{
+        width: 80%;
+    }
+    .skill3>p span{
+        left: 47vw;
+    }
+    .skill4>.barra::after{
+        width: 70%;
+    }
+    .skill4>p span{
+        left: 34vw;
+    }
+    #experiencia{
+        background-color: var(--color-cuadros);
+        margin: 0 7rem;
+    }
+    #experiencia h2{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        padding: 2.5rem 0 0 0;
+    }
+    .carrusel ul{
+        display:flex;
+        justify-content:space-between ;
+    }
+    #portafolio{
+        margin: 4rem 1rem 3rem 1rem;
+    }
+    #portafolio h2{
+        font-size: 2.2rem;
+    }
+    #portafolio .contain-text{
+        padding: 1rem 1rem 1.5rem 2.5rem;
+    }
+    .contain-img img{
+        width: 35vw;
+        height: 50vh;
+        margin: 0 1rem;
+        margin-bottom: 1rem;
+    }
+    .contain-2img>img{
+        width: 23vw;
+        height: 50vh;
+    }
+    #contact h2{
+        font-size: 2.3rem;
+    }
+    .contain-contact>.mail img{
+        margin-left: 2.5rem;
+    }
+    .contain-contact .text-number,.text-mail{
+        font-weight: 600;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    .contain-contact img{
+        width: 155px;
+    }
+    .contain-contact .number,.text{
+        font-size: 1.2rem;
+    }
+    .box-star img{
+        width: 2.3rem;
+        margin: 0 .5rem 1rem .5rem; 
+    }    
 }
