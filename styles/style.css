@@ -185,7 +185,7 @@ span{
     border-radius: 50px;
     background-color: #ddd3cb;
     padding-left: .5rem;
-    width: 70vw;
+    width: 100vw;
     height: 40px;
     margin: auto;
     border: none;
@@ -194,11 +194,11 @@ span{
     border: none;
     background-color: var(--color-nav);
     color: #fff;
-    border-radius: 30px;
-    padding: 0 1.5rem;
+    border-radius: 20px;
+    padding: 0 1.8rem;
 }
 #colaboracion>div>button p{
-    font-size: 1rem;
+    font-size: .7rem;
 }
 ::placeholder{
     background-color: #ddd3cb;
@@ -222,11 +222,11 @@ span{
 
 .acerca-de-mi>button{
     display: flex;
-    width: 50vw;
+    width: 65vw;
     justify-content: space-evenly;
     margin: 2rem 0;
-    margin-left: 20vw;
-    padding: .5rem 1.5rem;
+    margin-left: 14vw;
+    padding: .5rem 1rem;
     background-color: var(--color-nav);
     color: #fff;
     font-size: 1rem;
@@ -234,7 +234,7 @@ span{
 }
 .acerca-de-mi>button img{
     color: #fff;
-    width: px; 
+    width: 33px; 
 }
 #estudios h2{
     text-align: center;
@@ -247,20 +247,24 @@ span{
 #estudios>.escuelas .escuela1{
     padding: 1.5rem;
     padding-top: 2rem;
-    margin: .5rem;
+    margin: .5rem 0 .5rem 1rem;
     border-radius: 8%;
     background-color: var(--color-cuadros);
 }
 #estudios>.escuelas .escuela2{
     padding: 1rem 2rem;
-    margin: .5rem;
+    margin: .5rem 1rem .5rem 0;
     border-radius: 8%;
     background-color: var(--color-cuadros);
 }
 #estudios>.escuelas>.escuela1 img{
+    margin-left: 2rem;
     width: 70px;
     height: 35px;
     margin-bottom: 1.7rem;
+}
+#estudios>.escuelas>.escuela2 img{
+    margin-left: 1.5rem;
 }
 #estudios>.escuelas .institucion{
     font-weight: 600;
@@ -283,13 +287,13 @@ span{
 }
 
 #skills{
-    width: 90vw;
+    width: 80vw;
 }
 #skills p{
     font-weight: 600;
 }
 .barra,.barra::after{
-    width: 85vw;
+    width: 80vw;
     height: 15px;
     display: inline-block;
     border-radius: 15px;
@@ -307,7 +311,7 @@ span{
 }
 .skill1>p span{
     position: relative;
-    left: 45vw;
+    left: 36vw;
     color: var(--color-nav);
 }
 .skill2>.barra::after{
@@ -315,7 +319,7 @@ span{
 }
 .skill2>p span{
     position: relative;
-    left: 40vw;
+    left: 33vw;
     color: var(--color-nav);
 }
 .skill3>.barra::after{
@@ -323,7 +327,7 @@ span{
 }
 .skill3>p span{
     position: relative;
-    left: 60vw;
+    left: 53vw;
     color: var(--color-nav);
 }
 .skill4>.barra::after{
@@ -331,7 +335,7 @@ span{
 }
 .skill4>p span{
     position: relative;
-    left: 33vw;
+    left: 26vw;
     color: var(--color-nav);
 }
 
@@ -504,7 +508,7 @@ footer .agradecimiento{
         margin: 3rem 2rem;
     }    
     .acerca-de-mi>button{
-        margin-left: 19vw;
+        margin-left: 12vw;
         font-size: 1.2rem;
     }
     .acerca-de-mi>button img{
@@ -521,16 +525,16 @@ footer .agradecimiento{
         height: 18px;
     }
     .skill1>p span{
-        left: 52vw;
+        left: 46vw;
     }
     .skill2>p span{
-        left: 53vw;
+        left: 48vw;
     }
     .skill3>p span{
-        left: 62vw;
+        left: 57vw;
     }
     .skill4>p span{
-        left: 40vw;
+        left: 37vw;
     }
     
     #experiencia h2{
@@ -614,7 +618,7 @@ footer .agradecimiento{
         font-size: 1.4rem;
     }
     .acerca-de-mi>button{
-        margin-left: 19vw;
+        margin-left: 13vw;
         font-size: 1.2rem;
     }
     .acerca-de-mi>button img{
@@ -639,26 +643,26 @@ footer .agradecimiento{
     }
     
     #skills{
-        width: 85vw;
+        width: 80vw;
     }
     #skills p{
         font-weight: 600;
     }
     .barra,.barra::after{
-        width: 85vw;
+        width: 78vw;
         height: 20px;
     }
     .skill1>p span{
-        left: 54vw;
+        left: 45vw;
     }
     .skill2>p span{
-        left: 57vw;
+        left: 48vw;
     }
     .skill3>p span{
-        left: 63vw;
+        left: 54vw;
     }
     .skill4>p span{
-        left: 45vw;
+        left: 36vw;
     }
     
     #experiencia h2{
@@ -841,7 +845,8 @@ footer .agradecimiento{
         border: 5px solid var(--color-nav);
     }
     .acerca-de-mi>button img{
-        width: 26px; 
+        width: 32px;
+        margin-left: -2rem; 
     }
     #estudios h2{
         font-size: 2.2rem;
@@ -893,25 +898,25 @@ footer .agradecimiento{
         width: 80%;
     }
     .skill1>p span{
-        left: 39vw;
+        left: 37vw;
     }
     .skill2>.barra::after{
         width: 95%;
     }
     .skill2>p span{
-        left: 42vw;
+        left: 40vw;
     }
     .skill3>.barra::after{
         width: 80%;
     }
     .skill3>p span{
-        left: 46vw;
+        left: 44vw;
     }
     .skill4>.barra::after{
         width: 70%;
     }
     .skill4>p span{
-        left: 32vw;
+        left: 30vw;
     }
     #experiencia{
         background-color: var(--color-cuadros);
@@ -1056,10 +1061,18 @@ footer .agradecimiento{
     }
     
     .acerca-de-mi>button{
-        margin-left: 22vw;
-        padding: .9rem 1.3rem;
+        margin-left: 23vw;
+        padding: .4rem 1.1rem;
         padding-top: 1rem;
         font-size: 1rem;
+    }
+    .acerca-de-mi>button img{
+        width: 35px;
+    }
+    .acerca-de-mi>button p{
+        font-size: 1.1rem;
+        margin-left: -3.5rem;
+        margin-top: .1rem;
     }
     #estudios>.escuelas .escuela1{
         padding: 9rem;
@@ -1088,25 +1101,25 @@ footer .agradecimiento{
         width: 80%;
     }
     .skill1>p span{
-        left: 41vw;
+        left: 40vw;
     }
     .skill2>.barra::after{
         width: 95%;
     }
     .skill2>p span{
-        left: 46vw;
+        left: 45vw;
     }
     .skill3>.barra::after{
         width: 80%;
     }
     .skill3>p span{
-        left: 47vw;
+        left: 45vw;
     }
     .skill4>.barra::after{
         width: 70%;
     }
     .skill4>p span{
-        left: 34vw;
+        left: 33vw;
     }
     #experiencia{
         background-color: var(--color-cuadros);
